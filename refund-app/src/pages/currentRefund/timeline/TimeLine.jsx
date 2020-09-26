@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import TimeLineItem from './timeLineItem/timeLineItem';
 import PropTypes from 'prop-types';
 
@@ -6,8 +6,11 @@ const TimeLine = (props) => {
   const { timeLineItens } = props;
   return (
     <section>
-      {timeLineItens.map((timeLineItem) => (
-        <TimeLineItem timeLineItem={timeLineItem}></TimeLineItem>
+      {timeLineItens.map((timeLineItem, index) => (
+        <TimeLineItem
+          timeLineItem={timeLineItem}
+          key={timeLineItem.type + index}
+        ></TimeLineItem>
       ))}
     </section>
   );

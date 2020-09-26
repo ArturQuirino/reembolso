@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Card from '../../../components/card/Card';
 import './HeaderCurrentRefund.css';
 
@@ -9,6 +10,7 @@ class HeaderCurrentRefund extends Component {
   }
   render() {
     const { headerData } = this.props;
+
     return (
       <Card className="header-current-refund">
         <h1 className="header-current-refund__header">{headerData.title}</h1>
@@ -36,12 +38,28 @@ class HeaderCurrentRefund extends Component {
           </div>
           <div className="header-current-refund__analist-cost-center__cost-center">
             <span>Centro de Custo</span>
-            <span>100% - Approval CC Test</span>
+            <span>
+              {headerData.costCenter?.percentage}% -{' '}
+              {headerData.costCenter?.name}
+            </span>
           </div>
         </div>
       </Card>
     );
   }
 }
+
+HeaderCurrentRefund.propTypes = {
+  headerData: PropTypes.shape({
+    title: PropTypes.string,
+    name: PropTypes.string,
+    email: PropTypes.string,
+    justification: PropTypes.string,
+    costCenter: PropTypes.shape({
+      percentage: PropTypes.number,
+      name: PropTypes.string,
+    }),
+  }),
+};
 
 export default HeaderCurrentRefund;
