@@ -12,6 +12,10 @@ const ApiRepository = {
   getTimeLine: async () => {
     return await api.get('timeline');
   },
+
+  getSideBar: async () => {
+    return await api.get('sidebar');
+  },
 };
 
 export default ApiRepository;

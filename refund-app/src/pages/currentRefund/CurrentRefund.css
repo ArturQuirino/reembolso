@@ -3,4 +3,13 @@
   margin: 5vh 0 0 15vw;
   min-height: 95vh;
   padding: 12px 48px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+}
+
+@media only screen and (min-width: 922px) {
+  .currentRefund {
+    grid-template-columns: 2fr 1fr;
+  }
 }

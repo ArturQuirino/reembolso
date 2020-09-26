@@ -5,6 +5,7 @@ import HeaderCurrentRefund from './headerCurrentRefund/HeaderCurrentRefund';
 import './CurrentRefund.css';
 import TimeLine from './timeline/TimeLine';
 import ApiRepository from '../../repositories/apiRepository';
+import SideBar from './sideBar/SideBar';
 
 class CurrentRefundPage extends Component {
   constructor(props) {
@@ -29,7 +30,6 @@ class CurrentRefundPage extends Component {
     });
 
     ApiRepository.getTimeLine().then((res) => {
-      console.log(res);
       const timeLineItens = res.data.content.map((item) => {
         return {
           value: item.amountTotal,
@@ -59,6 +59,7 @@ class CurrentRefundPage extends Component {
           <HeaderCurrentRefund headerData={this.state.headerData} />
         </header>
         <TimeLine timeLineItens={this.state.timeLineItens} />
+        <SideBar className="currentRefund__side-bar" />
       </div>
     );
   }
