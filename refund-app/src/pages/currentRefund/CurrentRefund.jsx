@@ -3,6 +3,7 @@ import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
 import HeaderCurrentRefund from './headerCurrentRefund/HeaderCurrentRefund';
 
 import './CurrentRefund.css';
+import TimeLine from './timeline/TimeLine';
 
 class CurrentRefundPage extends Component {
   constructor(props) {
@@ -23,6 +24,23 @@ class CurrentRefundPage extends Component {
     justification: '1212',
   };
 
+  timeLineItens = [
+    {
+      value: 1,
+      type: 'Pagamento Realizado',
+      observation: 'Despositado no dia x',
+      status: 'Aprovado',
+      date: new Date(1, 1, 1),
+    },
+    {
+      value: 1,
+      type: 'Pagamento Realizado',
+      observation: 'Despositado no dia x',
+      status: 'Aprovado',
+      date: new Date(1, 1, 1),
+    },
+  ];
+
   render() {
     return (
       <div className="currentRefund">
@@ -30,6 +48,7 @@ class CurrentRefundPage extends Component {
           <Breadcrumbs links={this.breadcrumb} />
           <HeaderCurrentRefund headerData={this.headerData} />
         </header>
+        <TimeLine timeLineItens={this.timeLineItens} />
       </div>
     );
   }

@@ -1,0 +1,19 @@
+.timeline-item {
+  background-color: white;
+  display: flex;
+  margin: 12px 0;
+  padding: 36px 42px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.timeline-item__container-valor {
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-item__container-valor__label {
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #d0d3d6;
+}
