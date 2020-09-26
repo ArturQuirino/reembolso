@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
 
 const BreadCrumb = (props) => {
   const { links } = props;
@@ -12,6 +13,15 @@ const BreadCrumb = (props) => {
       ))}
     </nav>
   );
+};
+
+BreadCrumb.propTypes = {
+  links: PropTypes.arrayOf(
+    PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      url: PropTypes.string,
+    }).isRequired
+  ),
 };
 
 export default BreadCrumb;

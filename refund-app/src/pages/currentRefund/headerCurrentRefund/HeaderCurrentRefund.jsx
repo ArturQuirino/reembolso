@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './HeaderCurrentRefund.css';
 
 class HeaderCurrentRefund extends Component {
   constructor(props) {
@@ -8,7 +9,7 @@ class HeaderCurrentRefund extends Component {
   render() {
     const { headerData } = this.props;
     return (
-      <header>
+      <div className="header-current-refund">
         <h1>{headerData.title}</h1>
         <div>
           <span>Nome</span>
@@ -18,7 +19,7 @@ class HeaderCurrentRefund extends Component {
           <span>Justificativa</span>
           <span>{headerData.justification}</span>
         </div>
-      </header>
+      </div>
     );
   }
 }

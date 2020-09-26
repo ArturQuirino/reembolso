@@ -1,3 +1,6 @@
 .App {
   text-align: center;
+  background-color: #053d4e;
+  min-height: 100vh;
+  overflow: auto;
 }

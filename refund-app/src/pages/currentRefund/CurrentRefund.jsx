@@ -1,6 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import BreadCrumb from '../../components/breadcrumbs/Breadcrumbs';
-import HeaderCurrentRefund from './header/Header';
+import HeaderCurrentRefund from './headerCurrentRefund/HeaderCurrentRefund';
+
+import './CurrentRefund.css';
 
 class CurrentRefundPage extends Component {
   constructor(props) {
@@ -23,12 +25,12 @@ class CurrentRefundPage extends Component {
 
   render() {
     return (
-      <Fragment>
-        <header>
+      <div className="currentRefund">
+        <header className="currentRefund__header">
           <BreadCrumb links={this.breadcrumb} />
-          <HeaderCurrentRefund headerData={this.headerData} />{' '}
+          <HeaderCurrentRefund headerData={this.headerData} />
         </header>
-      </Fragment>
+      </div>
     );
   }
 }
