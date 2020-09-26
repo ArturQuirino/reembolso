@@ -1,8 +1,10 @@
-.input {
+.select {
   height: 36px;
   border-radius: 6px;
   border: solid 1px #dfe2e6;
   background-color: #ffffff;
-  padding: 0 12px 0;
   font-size: 1rem;
+  line-height: 1.5;
+  color: #6b7480;
+  padding: 0 12px;
 }

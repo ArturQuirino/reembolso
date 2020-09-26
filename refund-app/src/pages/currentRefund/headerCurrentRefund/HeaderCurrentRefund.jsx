@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Card from '../../../components/card/Card';
 import './HeaderCurrentRefund.css';
+import Select from '../../../components/select/Select';
 
 class HeaderCurrentRefund extends Component {
   constructor(props) {
@@ -29,12 +30,12 @@ class HeaderCurrentRefund extends Component {
         <div className="header-current-refund__analist">
           <div className="header-current-refund__analist-cost-center__analist">
             <label htmlFor="analist">Atribuir analista</label>
-            <select name="analist" name="analist">
+            <Select name="analist" name="analist">
               <option>A</option>
               <option>b</option>
               <option>c</option>
               <option>d</option>
-            </select>
+            </Select>
           </div>
           <div className="header-current-refund__analist-cost-center__cost-center">
             <span>Centro de Custo</span>

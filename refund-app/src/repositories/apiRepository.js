@@ -16,6 +16,11 @@ const ApiRepository = {
   getSideBar: async () => {
     return await api.get('sidebar');
   },
+
+  addExpense: async (payload) => {
+    debugger;
+    return await api.post('expense/add', payload);
+  },
 };
 
 export default ApiRepository;
