@@ -1,3 +1,40 @@
 .header-current-refund {
   overflow: auto;
+  background-image: linear-gradient(to right, #00d7ce 3%, #00c5fc);
+  color: white;
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 25px 48px;
+  margin: 24px 2%;
+}
+
+.header-current-refund__header {
+  font-size: 1.25rem;
+  grid-column: 1 / span 2;
+}
+
+.header-current-refund__properties {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: start;
+  gap: 4px 28px;
+}
+
+.header-current-refund__properties__label {
+  text-align: end;
+}
+
+.header-current-refund__analist-cost-center {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-current-refund__analist-cost-center__analist {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-current-refund__analist-cost-center__cost-center {
+  display: flex;
+  flex-direction: column;
 }
