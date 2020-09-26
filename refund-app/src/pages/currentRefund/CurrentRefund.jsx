@@ -4,7 +4,6 @@ import HeaderCurrentRefund from './headerCurrentRefund/HeaderCurrentRefund';
 
 import './CurrentRefund.css';
 import TimeLine from './timeline/TimeLine';
-import ApiRepository from '../../repositories/apiRepository';
 import SideBar from './sideBar/SideBar';
 import AdicionarDespesa from './adicionarDespesa/AdicionarDespesa';
 
@@ -14,23 +13,6 @@ class CurrentRefundPage extends Component {
     this.state = {
       timeLineItens: [],
     };
-  }
-
-  componentDidMount() {
-    ApiRepository.getTimeLine().then((res) => {
-      const timeLineItens = res.data.content.map((item) => {
-        return {
-          value: item.amountTotal,
-          type: item.cardType,
-          observation: item.notes,
-          status: item.status,
-          date: new Date(item.cardDate),
-        };
-      });
-      this.setState({
-        timeLineItens: timeLineItens,
-      });
-    });
   }
 
   breadcrumb = [
@@ -44,11 +26,11 @@ class CurrentRefundPage extends Component {
       <div className="currentRefund">
         <header className="currentRefund__header">
           <Breadcrumbs links={this.breadcrumb} />
-          <HeaderCurrentRefund headerData={this.state.headerData} />
+          <HeaderCurrentRefund />
         </header>
         <div>
           <AdicionarDespesa />
-          <TimeLine timeLineItens={this.state.timeLineItens} />
+          <TimeLine />
         </div>
 
         <SideBar className="currentRefund__side-bar" />

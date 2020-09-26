@@ -1,31 +1,38 @@
-import React from 'react';
+import React, { Component } from 'react';
 import TimeLineItem from './timeLineItem/timeLineItem';
-import PropTypes from 'prop-types';
+import ApiRepository from '../../../repositories/apiRepository';
 
-const TimeLine = (props) => {
-  const { timeLineItens } = props;
-  return (
-    <section>
-      {timeLineItens.map((timeLineItem, index) => (
-        <TimeLineItem
-          timeLineItem={timeLineItem}
-          key={timeLineItem.type + index}
-        ></TimeLineItem>
-      ))}
-    </section>
-  );
-};
+class TimeLine extends Component {
+  state = { timeLineItens: [] };
+  componentDidMount() {
+    ApiRepository.getTimeLine().then((res) => {
+      const timeLineItens = res.data.content.map((item) => {
+        return {
+          value: item.amountTotal,
+          type: item.cardType,
+          observation: item.notes,
+          status: item.status,
+          date: new Date(item.cardDate),
+        };
+      });
+      this.setState({
+        timeLineItens: timeLineItens,
+      });
+    });
+  }
 
-TimeLine.propTypes = {
-  timeLineItens: PropTypes.arrayOf(
-    PropTypes.shape({
-      type: PropTypes.string,
-      value: PropTypes.number,
-      observation: PropTypes.string,
-      status: PropTypes.string,
-      date: PropTypes.instanceOf(Date),
-    })
-  ),
-};
+  render() {
+    return (
+      <section>
+        {this.state.timeLineItens.map((timeLineItem, index) => (
+          <TimeLineItem
+            timeLineItem={timeLineItem}
+            key={timeLineItem.type + index}
+          ></TimeLineItem>
+        ))}
+      </section>
+    );
+  }
+}
 
 export default TimeLine;
