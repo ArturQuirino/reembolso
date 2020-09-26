@@ -1,0 +1,57 @@
+.adicionar-despesa {
+  background-color: white;
+  padding: 24px 48px;
+  display: flex;
+  flex-direction: column;
+}
+
+.adicionar-despesa__titulo {
+  font-size: 1.25rem;
+  font-weight: bold;
+  line-height: 1.5;
+  color: #353a40;
+}
+
+.adicionar-despesa__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.adicionar-despesa__container-form-inputs {
+  display: flex;
+}
+
+.adicionar-despesa__container-form-inputs__container-file {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.adicionar-despesa__container-form-inputs__container-file__title {
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.5;
+  color: #343a42;
+}
+
+.adicionar-despesa__container-form-inputs__container-file__input {
+  height: 200px;
+  object-fit: contain;
+  border-radius: 3px;
+  border: solid 1px #dfe2df;
+  background-color: #ffffff;
+  padding: 23px 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.adicionar-despesa__container-form-inputs__container-file__obs {
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: #848a91;
+}
+
+.adicionar-despesa__container-form-buttons {
+  align-self: flex-end;
+}

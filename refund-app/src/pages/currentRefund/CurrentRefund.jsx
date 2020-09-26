@@ -6,11 +6,17 @@ import './CurrentRefund.css';
 import TimeLine from './timeline/TimeLine';
 import ApiRepository from '../../repositories/apiRepository';
 import SideBar from './sideBar/SideBar';
+import Button from '../../components/button/Button';
+import AdicionarDespesa from './adicionarDespesa/AdicionarDespesa';
 
 class CurrentRefundPage extends Component {
   constructor(props) {
     super(props);
-    this.state = { headerData: {}, timeLineItens: [] };
+    this.state = {
+      headerData: {},
+      timeLineItens: [],
+      openedAddExpenseCard: true,
+    };
   }
 
   componentDidMount() {
@@ -51,6 +57,11 @@ class CurrentRefundPage extends Component {
     { label: 'Current', url: '#' },
   ];
 
+  toggleAddExpenseCard = () => {
+    const openedAddExpenseCard = !this.state.openedAddExpenseCard;
+    this.setState({ openedAddExpenseCard });
+  };
+
   render() {
     return (
       <div className="currentRefund">
@@ -58,7 +69,12 @@ class CurrentRefundPage extends Component {
           <Breadcrumbs links={this.breadcrumb} />
           <HeaderCurrentRefund headerData={this.state.headerData} />
         </header>
-        <TimeLine timeLineItens={this.state.timeLineItens} />
+        <div>
+          <Button onClick={this.toggleAddExpenseCard}>Adicionar Despesa</Button>
+          {this.state.openedAddExpenseCard && <AdicionarDespesa />}
+          <TimeLine timeLineItens={this.state.timeLineItens} />
+        </div>
+
         <SideBar className="currentRefund__side-bar" />
       </div>
     );
