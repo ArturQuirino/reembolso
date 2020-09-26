@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import Button from '../../../components/button/Button';
 import Card from '../../../components/card/Card';
 import Input from '../../../components/input/input';

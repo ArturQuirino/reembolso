@@ -6,34 +6,17 @@ import './CurrentRefund.css';
 import TimeLine from './timeline/TimeLine';
 import ApiRepository from '../../repositories/apiRepository';
 import SideBar from './sideBar/SideBar';
-import Button from '../../components/button/Button';
 import AdicionarDespesa from './adicionarDespesa/AdicionarDespesa';
 
 class CurrentRefundPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      headerData: {},
       timeLineItens: [],
     };
   }
 
   componentDidMount() {
-    ApiRepository.getHeader().then((res) => {
-      this.setState({
-        headerData: {
-          title: res.data.title,
-          name: res.data.collaborator.name,
-          email: res.data.collaborator.email,
-          justification: res.data.justification,
-          costCenter: {
-            percentage: res.data.costCenters[0].percentage,
-            name: res.data.costCenters[0].name,
-          },
-        },
-      });
-    });
-
     ApiRepository.getTimeLine().then((res) => {
       const timeLineItens = res.data.content.map((item) => {
         return {
