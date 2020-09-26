@@ -17,3 +17,13 @@
   font-weight: bold;
   color: #d0d3d6;
 }
+
+.timeline-item__container-valor__icon {
+  width: 59px;
+  height: 59px;
+  background-color: #f0f3f7;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
