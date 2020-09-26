@@ -78,25 +78,47 @@ class SideBar extends Component {
               </div>
             </div>
             <div>
-              <span>Extrato</span>
+              <div className="sidebar__card__title-extrato">Extrato</div>
               <div className="sidebar__card__extrato">
-                <span>Descrição</span>
-                <span>Valor</span>
-                <div>
-                  <span>Despesas declaradas</span>
-                  <span>Despesas declaradas pelo trooper</span>
+                <span className="sidebar__card__extrato__column-title">
+                  Descrição
+                </span>
+                <span className="sidebar__card__extrato__column-title">
+                  Valor
+                </span>
+                <div className="sidebar__card__extrato__container-key">
+                  <span className="sidebar__card__extrato__key-strong">
+                    Despesas declaradas
+                  </span>
+                  <span className="sidebar__card__extrato__key">
+                    Despesas declaradas pelo trooper
+                  </span>
                 </div>
-                <span>{sideBarCard.currency + ' ' + sideBarCard.declared}</span>
-                <div>
-                  <span>Despesas aprovadas</span>
-                  <span>Despesas aprovadas pelo trooper</span>
+                <span className="sidebar__card__extrato__value">
+                  {sideBarCard.currency + ' ' + sideBarCard.declared}
+                </span>
+                <div className="sidebar__card__extrato__container-key">
+                  <span className="sidebar__card__extrato__key-strong">
+                    Despesas aprovadas
+                  </span>
+                  <span className="sidebar__card__extrato__key">
+                    Despesas aprovadas pelo trooper
+                  </span>
                 </div>
-                <span>{sideBarCard.currency + ' ' + sideBarCard.received}</span>
-                <div>
-                  <span>Pagamento realizado</span>
-                  <span>Pagamento realizado pelo financeiro</span>
+                <span className="sidebar__card__extrato__value">
+                  {sideBarCard.currency + ' ' + sideBarCard.received}
+                </span>
+                <div className="sidebar__card__extrato__container-key">
+                  <span className="sidebar__card__extrato__key-strong">
+                    Pagamento realizado
+                  </span>
+                  <span className="sidebar__card__extrato__key">
+                    Pagamento realizado pelo financeiro
+                  </span>
                 </div>
-                <span>{sideBarCard.currency + ' ' + sideBarCard.returned}</span>
+                <span className="sidebar__card__extrato__value">
+                  {sideBarCard.currency + ' ' + sideBarCard.returned}
+                </span>
               </div>
             </div>
           </Card>
