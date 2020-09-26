@@ -39,6 +39,64 @@
   color: #009d43;
 }
 
+.sidebar__card__container-valor-receber {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 32px 0;
+}
+
+.sidebar__card__container-valor-receber__title {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  text-align: center;
+  color: #6b7480;
+}
+
+.sidebar__card__container-valor-receber__value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: #053d4e;
+}
+
+.sidebar__card__container-resumo {
+  display: flex;
+  justify-content: center;
+  margin: 12px 0;
+}
+
+.sidebar__card__container-resumo__gasto-recebeu {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  margin: 0 20px;
+}
+
+.sidebar__card__container-resumo__gasto-recebeu__icon {
+  grid-row: 1 / span 2;
+  font-family: FontAwesome5Pro;
+  font-size: 12px;
+  text-align: center;
+  color: #d0d3d6;
+  width: 26px !important;
+  height: 26px;
+  border: solid 1px #d0d3d6;
+  background-color: #ffffff;
+  border-radius: 50%;
+  align-self: center;
+}
+
+.sidebar__card__container-resumo__gasto-recebeu__title {
+  font-size: 0.75rem;
+  color: #9ea4ac;
+}
+
+.sidebar__card__container-resumo__gasto-recebeu__value {
+  font-size: 1rem;
+  color: #32363b;
+}
+
 .sidebar__card__extrato {
   display: grid;
   grid-template-columns: auto auto;

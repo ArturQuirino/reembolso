@@ -3,6 +3,9 @@ import Card from '../../../components/card/Card';
 import './SideBar.css';
 import ApiRepository from '../../../repositories/apiRepository';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowUp, faArrowDown } from '@fortawesome/free-solid-svg-icons';
+
 class SideBar extends Component {
   constructor(props) {
     super(props);
@@ -37,9 +40,42 @@ class SideBar extends Component {
                 {sideBarCard.status}
               </span>
             </div>
-            <div>
-              <span>Valor a receber</span>
-              <span>{sideBarCard.declared - sideBarCard.received}</span>
+            <div className="sidebar__card__container-valor-receber">
+              <span className="sidebar__card__container-valor-receber__title">
+                Valor a receber
+              </span>
+              <span className="sidebar__card__container-valor-receber__value">
+                {sideBarCard.currency +
+                  ' ' +
+                  (sideBarCard.declared - sideBarCard.received)}
+              </span>
+            </div>
+            <div className="sidebar__card__container-resumo">
+              <div className="sidebar__card__container-resumo__gasto-recebeu">
+                <FontAwesomeIcon
+                  icon={faArrowUp}
+                  className="sidebar__card__container-resumo__gasto-recebeu__icon"
+                />
+
+                <span className="sidebar__card__container-resumo__gasto-recebeu__title">
+                  Gastou
+                </span>
+                <span className="sidebar__card__container-resumo__gasto-recebeu__value">
+                  {sideBarCard.currency + ' ' + sideBarCard.declared}
+                </span>
+              </div>
+              <div className="sidebar__card__container-resumo__gasto-recebeu">
+                <FontAwesomeIcon
+                  icon={faArrowDown}
+                  className="sidebar__card__container-resumo__gasto-recebeu__icon"
+                />
+                <span className="sidebar__card__container-resumo__gasto-recebeu__title">
+                  Recebeu
+                </span>
+                <span className="sidebar__card__container-resumo__gasto-recebeu__value">
+                  {sideBarCard.currency + ' ' + sideBarCard.received}
+                </span>
+              </div>
             </div>
             <div>
               <span>Extrato</span>
