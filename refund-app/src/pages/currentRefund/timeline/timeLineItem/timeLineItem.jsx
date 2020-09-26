@@ -57,33 +57,82 @@ class TimeLineItem extends Component {
     }
   };
 
+  getStyleStatus = () => {
+    switch (this.props.timeLineItem.status) {
+      case 'PENDING':
+        return {
+          backgroundColor: '#FFFEAA',
+          color: '#A7A900',
+          borderColor: '#A7A900',
+        };
+      case 'APPROVED':
+        return {
+          backgroundColor: '#e6fff0',
+          color: '#03a046',
+          borderColor: '#03a046',
+        };
+      case 'Rejected':
+        return {
+          backgroundColor: '#FFAAAA',
+          color: 'red',
+          borderColor: 'red',
+        };
+      default:
+        return {
+          backgroundColor: 'gray',
+          color: 'black',
+          borderColor: 'black',
+        };
+    }
+  };
+
   render() {
     const { timeLineItem } = this.props;
     return (
       <Card className="timeline-item">
         <div className="timeline-item__container-valor">
           {this.getIconBasedOnStatus()}
-
-          <span>{timeLineItem.date.toLocaleDateString()}</span>
+          <span className="timeline-item__container-valor__date">
+            {timeLineItem.date.toLocaleDateString()}
+          </span>
         </div>
         <div className="timeline-item__container-valor">
           <span className="timeline-item__container-valor__label">Tipo</span>
-          <span>{timeLineItem.type}</span>
-        </div>
-        <div className="timeline-item__container-valor">
-          <span className="timeline-item__container-valor__label">Valor</span>
-          <span>{timeLineItem.value}</span>
-        </div>
-        <div className="timeline-item__container-valor">
-          <span className="timeline-item__container-valor__label">
-            Observação
+          <span className="timeline-item__container-valor__type">
+            {timeLineItem.type}
           </span>
-          <span>{timeLineItem.observation}</span>
         </div>
-        <div className="timeline-item__container-valor">
-          <span className="timeline-item__container-valor__label">Status</span>
-          <span>{timeLineItem.status}</span>
-        </div>
+        {timeLineItem.value && (
+          <div className="timeline-item__container-valor">
+            <span className="timeline-item__container-valor__label">Valor</span>
+            <span className="timeline-item__container-valor__value">
+              {timeLineItem.value}
+            </span>
+          </div>
+        )}
+        {timeLineItem.observation && (
+          <div className="timeline-item__container-valor">
+            <span className="timeline-item__container-valor__label">
+              Observação
+            </span>
+            <span className="timeline-item__container-valor__obs">
+              {timeLineItem.observation}
+            </span>
+          </div>
+        )}
+        {timeLineItem.status && (
+          <div className="timeline-item__container-valor">
+            <span className="timeline-item__container-valor__label">
+              Status
+            </span>
+            <div
+              className="timeline-item__container-valor__status"
+              style={this.getStyleStatus()}
+            >
+              {timeLineItem.status}
+            </div>
+          </div>
+        )}
       </Card>
     );
   }
