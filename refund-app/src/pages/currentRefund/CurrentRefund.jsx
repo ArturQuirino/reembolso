@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import BreadCrumb from '../../components/breadcrumbs/Breadcrumbs';
+import Breadcrumbs from '../../components/breadcrumbs/Breadcrumbs';
 import HeaderCurrentRefund from './headerCurrentRefund/HeaderCurrentRefund';
 
 import './CurrentRefund.css';
@@ -27,7 +27,7 @@ class CurrentRefundPage extends Component {
     return (
       <div className="currentRefund">
         <header className="currentRefund__header">
-          <BreadCrumb links={this.breadcrumb} />
+          <Breadcrumbs links={this.breadcrumb} />
           <HeaderCurrentRefund headerData={this.headerData} />
         </header>
       </div>

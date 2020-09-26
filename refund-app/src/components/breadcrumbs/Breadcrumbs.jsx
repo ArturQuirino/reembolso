@@ -1,21 +1,24 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
+import './Breadcrumbs.css';
 
-const BreadCrumb = (props) => {
+const Breadcrumbs = (props) => {
   const { links } = props;
   return (
-    <nav>
+    <nav className="breadcrumb">
       {links.map((link, index) => (
         <Fragment key={link + index}>
           {index === 0 ? '' : ' / '}
-          <a href={link.url}>{link.label}</a>
+          <a href={link.url} className="breadcrumb__anchorLinks">
+            {link.label}
+          </a>
         </Fragment>
       ))}
     </nav>
   );
 };
 
-BreadCrumb.propTypes = {
+Breadcrumbs.propTypes = {
   links: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string.isRequired,
@@ -24,4 +27,4 @@ BreadCrumb.propTypes = {
   ),
 };
 
-export default BreadCrumb;
+export default Breadcrumbs;
