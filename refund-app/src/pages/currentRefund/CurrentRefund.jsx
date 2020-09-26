@@ -15,7 +15,6 @@ class CurrentRefundPage extends Component {
     this.state = {
       headerData: {},
       timeLineItens: [],
-      openedAddExpenseCard: true,
     };
   }
 
@@ -57,11 +56,6 @@ class CurrentRefundPage extends Component {
     { label: 'Current', url: '#' },
   ];
 
-  toggleAddExpenseCard = () => {
-    const openedAddExpenseCard = !this.state.openedAddExpenseCard;
-    this.setState({ openedAddExpenseCard });
-  };
-
   render() {
     return (
       <div className="currentRefund">
@@ -70,8 +64,7 @@ class CurrentRefundPage extends Component {
           <HeaderCurrentRefund headerData={this.state.headerData} />
         </header>
         <div>
-          <Button onClick={this.toggleAddExpenseCard}>Adicionar Despesa</Button>
-          {this.state.openedAddExpenseCard && <AdicionarDespesa />}
+          <AdicionarDespesa />
           <TimeLine timeLineItens={this.state.timeLineItens} />
         </div>
 

@@ -18,7 +18,6 @@ const ApiRepository = {
   },
 
   addExpense: async (payload) => {
-    debugger;
     return await api.post('expense/add', payload);
   },
 };

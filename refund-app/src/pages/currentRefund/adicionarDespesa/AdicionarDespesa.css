@@ -1,3 +1,12 @@
+.adicionar-despesa__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.adicionar-despesa__button {
+  align-self: flex-end;
+}
+
 .adicionar-despesa {
   background-color: white;
   padding: 24px 48px;
@@ -67,7 +76,7 @@
 .adicionar-despesa__container-form-inputs__container-texts {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 40%;
   margin: 0 10%;
 }
 
