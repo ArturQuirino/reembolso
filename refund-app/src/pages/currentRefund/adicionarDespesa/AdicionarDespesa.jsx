@@ -5,6 +5,7 @@ import Input from '../../../components/input/input';
 import Select from '../../../components/select/Select';
 import './AdicionarDespesa.css';
 import ApiRepository from '../../../repositories/apiRepository';
+import Alert from '../../../components/alert/Alert';
 
 class AdicionarDespesa extends Component {
   constructor(props) {
@@ -19,6 +20,7 @@ class AdicionarDespesa extends Component {
       file: '',
 
       openedAddExpenseCard: false,
+      alertIsOpen: false,
     };
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmitForm = this.handleSubmitForm.bind(this);
@@ -50,7 +52,12 @@ class AdicionarDespesa extends Component {
       notes: this.state.notes,
       resourceUrl: this.state.file,
       cardDate: Date.parse(this.state.cardDate),
-    }).then(this.setState({ openedAddExpenseCard: false }));
+    }).then(() => {
+      this.setState({ openedAddExpenseCard: false, alertIsOpen: true });
+      setTimeout(() => {
+        this.setState({ alertIsOpen: false });
+      }, 3000);
+    });
   }
   render() {
     return (
@@ -189,6 +196,7 @@ class AdicionarDespesa extends Component {
             </form>
           </Card>
         )}
+        {this.state.alertIsOpen && <Alert>Despesa salva com sucesso</Alert>}
       </section>
     );
   }

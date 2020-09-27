@@ -1,0 +1,14 @@
+.alert {
+  position: fixed;
+  top: 48px;
+  right: 24px;
+  height: 48px;
+  background-color: #edfff5;
+  border: solid 1px #009d43;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: green;
+  padding: 24px;
+}
