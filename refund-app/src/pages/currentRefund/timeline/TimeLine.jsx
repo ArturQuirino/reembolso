@@ -13,6 +13,7 @@ class TimeLine extends Component {
           observation: item.notes,
           status: item.status,
           date: new Date(item.cardDate),
+          currency: item.currencyCode,
         };
       });
       this.setState({

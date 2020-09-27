@@ -106,7 +106,7 @@ class TimeLineItem extends Component {
           <div className="timeline-item__container-valor">
             <span className="timeline-item__container-valor__label">Valor</span>
             <span className="timeline-item__container-valor__value">
-              {timeLineItem.value}
+              {timeLineItem.currency + ' ' + timeLineItem.value}
             </span>
           </div>
         )}
@@ -145,6 +145,7 @@ TimeLineItem.propTypes = {
     observation: PropTypes.string,
     status: PropTypes.string,
     date: PropTypes.instanceOf(Date),
+    currency: PropTypes.string,
   }),
 };
 
