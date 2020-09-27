@@ -63,7 +63,7 @@ class HeaderCurrentRefund extends Component {
           <span className="header-current-refund__properties__label">Data</span>
           <span>{new Date(this.state.date).toLocaleDateString()}</span>
         </div>
-        <div className="header-current-refund__analist">
+        <div className="header-current-refund__analist-cost-center">
           <div className="header-current-refund__analist-cost-center__analist">
             <label htmlFor="analist">Atribuir analista</label>
             <Select name="analist" name="analist">

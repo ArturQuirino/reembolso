@@ -27,6 +27,9 @@
 .header-current-refund__analist-cost-center {
   display: flex;
   flex-direction: column;
+  border-left: solid 1px white;
+  padding: 12px;
+  justify-content: space-around;
 }
 
 .header-current-refund__analist-cost-center__analist {
