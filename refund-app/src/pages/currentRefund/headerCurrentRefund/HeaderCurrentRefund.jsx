@@ -66,7 +66,7 @@ class HeaderCurrentRefund extends Component {
         <div className="header-current-refund__analist-cost-center">
           <div className="header-current-refund__analist-cost-center__analist">
             <label htmlFor="analist">Atribuir analista</label>
-            <Select name="analist" name="analist">
+            <Select name="analist" id="analist">
               <option>Artur Quirino</option>
               <option>Alan Turing</option>
               <option>Ada Lovelace</option>

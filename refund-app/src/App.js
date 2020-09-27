@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import CurrentRefundPage from './pages/currentRefund/CurrentRefund';
+import CurrentRefundPage from './pages/currentRefund/CurrentRefundPage';
 
 function App() {
   return (
