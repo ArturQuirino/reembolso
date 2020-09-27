@@ -25,6 +25,7 @@ class AddExpense extends Component {
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmitForm = this.handleSubmitForm.bind(this);
     this.setSelectedFile = this.setSelectedFile.bind(this);
+    this.closeCard = this.closeCard.bind(this);
   }
 
   handleInputChange(event) {
@@ -39,6 +40,10 @@ class AddExpense extends Component {
   toggleAddExpenseCard = () => {
     const openedAddExpenseCard = !this.state.openedAddExpenseCard;
     this.setState({ openedAddExpenseCard });
+  };
+
+  closeCard = () => {
+    this.setState({ openedAddExpenseCard: false });
   };
 
   handleSubmitForm(event) {
@@ -188,7 +193,7 @@ class AddExpense extends Component {
                 </div>
               </div>
               <div className="adicionar-despesa__container-form-buttons">
-                <Button> Cancelar</Button>
+                <Button onClick={this.closeCard}> Cancelar</Button>
                 <Button type="submit" color="primary">
                   Salvar
                 </Button>
