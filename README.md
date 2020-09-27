@@ -36,4 +36,6 @@ A aplicação possui basicamente três pastas principais
   - A aplicação foi minimamente ajustada para se comportar bem em dispositivos de tamanhos diferentes, mas não foi pensada de maneira a ter uma experiência ótima em dispositivos menores.
   - Não foi utilizado nenhum transpilador de css, como SASS ou LESS.
   - Algumas informações deveriam estar como variáveis de ambiente, como o endpoint da api, por exemplo.
+  - Em alguns momentos o layout das instruções era diferente do layout do Zeplin. Neste caso, o desenvolvedor escolheu o que mais fazia sentido para ele.
+  - Algumas informações do protótipo não eram retornadas da API. Neste caso, elas não foram mostradas.
   
