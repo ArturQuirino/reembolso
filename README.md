@@ -3,7 +3,7 @@
 Esta é uma aplicação para simular a tela de pedido de reembolso de um funcionário.
 
 ## Executar
-Para executar a aplicação é necessário ter o NodeJs instalado. Com isto, basta rodar o comando `npm install` ou `yarn` e em seguida o comando `npm start` ou `yarn start`
+Para executar a aplicação é necessário ter o NodeJs instalado. Com isto, basta acessar a pasta "refund-app" e rodar o comando `npm install` ou `yarn` e em seguida o comando `npm start` ou `yarn start`
 
 ## Gerar artefato
 Para gerar o código otimizado para publicar, basta digitar o comando `npm build` ou `yarn build`
