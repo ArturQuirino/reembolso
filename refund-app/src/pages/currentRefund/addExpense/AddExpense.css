@@ -9,7 +9,8 @@
 
 .adicionar-despesa {
   background-color: white;
-  padding: 24px 48px;
+  padding: 24px 0;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   margin: 24px 0;
@@ -29,12 +30,15 @@
 
 .adicionar-despesa__container-form-inputs {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .adicionar-despesa__container-form-inputs__container-file {
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 80%;
 }
 
 .adicionar-despesa__container-form-inputs__title {
@@ -76,7 +80,7 @@
 .adicionar-despesa__container-form-inputs__container-texts {
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 80%;
   margin: 0 10%;
 }
 
@@ -87,4 +91,24 @@
 
 .adicionar-despesa__container-form-buttons > button {
   margin: 0 12px;
+}
+
+@media only screen and (min-width: 920px) {
+  .adicionar-despesa__container-form-inputs {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .adicionar-despesa {
+    padding: 24px 48px;
+    width: unset;
+  }
+
+  .adicionar-despesa__container-form-inputs__container-file {
+    width: 40%;
+  }
+
+  .adicionar-despesa__container-form-inputs__container-texts {
+    width: 40%;
+  }
 }

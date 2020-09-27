@@ -3,14 +3,14 @@
   background-image: linear-gradient(to right, #00d7ce 3%, #00c5fc);
   color: white;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto;
   padding: 25px 48px;
   margin: 24px 0;
 }
 
 .header-current-refund__header {
   font-size: 1.25rem;
-  grid-column: 1 / span 2;
+  grid-column: 1;
 }
 
 .header-current-refund__properties {
@@ -18,6 +18,7 @@
   grid-template-columns: auto auto;
   justify-content: start;
   gap: 4px 28px;
+  margin: 0 0 12px 0;
 }
 
 .header-current-refund__properties__label {
@@ -27,7 +28,7 @@
 .header-current-refund__analist-cost-center {
   display: flex;
   flex-direction: column;
-  border-left: solid 1px white;
+  border-top: solid 1px white;
   padding: 12px;
   justify-content: space-around;
 }
@@ -40,4 +41,23 @@
 .header-current-refund__analist-cost-center__cost-center {
   display: flex;
   flex-direction: column;
+}
+
+@media only screen and (min-width: 920px) {
+  .header-current-refund {
+    grid-template-columns: auto auto;
+  }
+
+  .header-current-refund__header {
+    grid-column: 1 / span 2;
+  }
+
+  .header-current-refund__analist-cost-center {
+    border-left: solid 1px white;
+    border-top: none;
+  }
+
+  .header-current-refund__properties {
+    margin: 0 12px 0 0;
+  }
 }
