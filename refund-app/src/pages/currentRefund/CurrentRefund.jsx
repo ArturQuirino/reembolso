@@ -5,7 +5,7 @@ import HeaderCurrentRefund from './headerCurrentRefund/HeaderCurrentRefund';
 import './CurrentRefund.css';
 import TimeLine from './timeline/TimeLine';
 import SideBar from './sideBar/SideBar';
-import AdicionarDespesa from './adicionarDespesa/AdicionarDespesa';
+import AddExpense from './addExpense/AddExpense';
 
 class CurrentRefundPage extends Component {
   constructor(props) {
@@ -29,7 +29,7 @@ class CurrentRefundPage extends Component {
           <HeaderCurrentRefund />
         </header>
         <div>
-          <AdicionarDespesa />
+          <AddExpense />
           <TimeLine />
         </div>
 

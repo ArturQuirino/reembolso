@@ -1,6 +1,6 @@
 .currentRefund {
   background-color: #f4f6fa;
-  margin: 5vh 0 0 15vw;
+  margin: 0;
   min-height: 95vh;
   padding: 12px 48px;
   display: grid;
@@ -8,9 +8,10 @@
   grid-template-rows: auto auto auto;
 }
 
-@media only screen and (min-width: 922px) {
+@media only screen and (min-width: 920px) {
   .currentRefund {
     grid-template-columns: 3fr 1fr;
     grid-template-rows: max-content;
+    margin: 5vh 0 0 15vw;
   }
 }

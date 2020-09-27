@@ -3,11 +3,11 @@ import Button from '../../../components/button/Button';
 import Card from '../../../components/card/Card';
 import Input from '../../../components/input/input';
 import Select from '../../../components/select/Select';
-import './AdicionarDespesa.css';
+import './AddExpense.css';
 import ApiRepository from '../../../repositories/apiRepository';
 import Alert from '../../../components/alert/Alert';
 
-class AdicionarDespesa extends Component {
+class AddExpense extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -202,4 +202,4 @@ class AdicionarDespesa extends Component {
   }
 }
 
-export default AdicionarDespesa;
+export default AddExpense;
