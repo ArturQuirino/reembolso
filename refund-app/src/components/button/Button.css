@@ -9,3 +9,9 @@
   line-height: 1.5;
   color: #6b7480;
 }
+
+.button.primary {
+  background-color: #51c1c3;
+  color: #ffffff;
+  border: none;
+}

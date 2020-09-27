@@ -182,7 +182,9 @@ class AdicionarDespesa extends Component {
               </div>
               <div className="adicionar-despesa__container-form-buttons">
                 <Button> Cancelar</Button>
-                <Button type="submit">Salvar</Button>
+                <Button type="submit" color="primary">
+                  Salvar
+                </Button>
               </div>
             </form>
           </Card>
